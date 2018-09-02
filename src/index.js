@@ -1,7 +1,7 @@
 if (typeof window === 'undefined') {
 	var jsdom = require("jsdom");
 	var { JSDOM } = jsdom;
-	var { document } = (new JSDOM(``)).window;
+	var { window } = (new JSDOM(``));
 }
 
 'use strict';
@@ -22,7 +22,7 @@ export default {
 			const averageImageViewingTimeInMinutes = 1 / 6; // I couldn't find a study regarding images, so I apply an arbitrary number
 			const averageWordLengthInCharacters = 4.79;
 
-			var el = document.createElement('template');
+			var el = window.document.createElement('template');
 			el.innerHTML = article;
 			const root = el.content;
 			const children = el.content.querySelectorAll('*');

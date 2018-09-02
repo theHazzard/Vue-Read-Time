@@ -11,7 +11,9 @@ if (typeof window === 'undefined') {
   var jsdom = require("jsdom");
 
   var JSDOM = jsdom.JSDOM;
-  var document = new JSDOM(``).window.document;
+
+  var _ref = new JSDOM(``),
+      window = _ref.window;
 }
 
 'use strict'; // Inspired by the "Read Time" on Medium.org
@@ -33,7 +35,7 @@ var _default = {
       const averageImageViewingTimeInMinutes = 1 / 6; // I couldn't find a study regarding images, so I apply an arbitrary number
 
       const averageWordLengthInCharacters = 4.79;
-      var el = document.createElement('template');
+      var el = window.document.createElement('template');
       el.innerHTML = article;
       const root = el.content;
       const children = el.content.querySelectorAll('*');
