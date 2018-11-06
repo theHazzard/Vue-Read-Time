@@ -85,7 +85,7 @@ var _default = {
      */
     getReadTimeInSecondsString: function getReadTimeInSecondsString(article, short) {
       let readingTime = this.getReadTimeInSeconds(article);
-      return readingTime + (short ? ' sec' : ' seconds');
+      return readingTime + (short ? ' sec' : ' segundos');
     },
 
     /**
@@ -96,7 +96,7 @@ var _default = {
      */
     getReadTimeInMinutesString: function getReadTimeInMinutesString(article, short) {
       let readingTime = this.getReadTimeInMinutes(article);
-      return readingTime + (short ? ' min' : ' minutes');
+      return readingTime + (short ? ' min' : ' minutos');
     },
 
     /**
@@ -113,7 +113,7 @@ var _default = {
       if (short) {
         return min + ' min, ' + sec + ' sec';
       } else {
-        return min + ' minutes, ' + sec + ' seconds';
+        return min + ' minutos, ' + sec + ' segundos';
       }
     },
 
@@ -130,14 +130,14 @@ var _default = {
       sec = Math.round(sec / 30) * 30;
 
       if (sec === 30) {
-        return min + ' and a half minutes';
+        return min + ' minutos y medio';
       }
 
       if (sec === 60) {
         min++;
       }
 
-      return min + ' minutes';
+      return min + ' minutos';
     }
   }
 };
