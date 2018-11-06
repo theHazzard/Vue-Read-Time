@@ -2,7 +2,7 @@
   "name": "vue-read-time",
   "version": "1.0.0",
   "description": "A plugin for Vue to calculate the read time of a specified string.",
-  "main": "src/index.js",
+  "main": "build/index.js",
   "scripts": {
     "compile": "./node_modules/.bin/babel ./src --out-dir ./build",
     "test": "npm run compile && mocha"
